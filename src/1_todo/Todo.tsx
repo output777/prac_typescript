@@ -35,6 +35,12 @@ const Todo = () => {
     })
   }
 
+  const onClickDeleteHandler = (id: number) => {
+    console.log(id);
+    const newTodo = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodo);
+  }
+
   return (
     <>
       <form onSubmit={onSubmitHandler}>
@@ -44,7 +50,10 @@ const Todo = () => {
       </form>
       <div>
         {todos.map((todo) => (
-          <div key={todo.id}>{todo.title}</div>
+          <div key={todo.id}>
+            <span>{todo.title}</span>
+            <button onClick={() => { onClickDeleteHandler(todo.id) }}>삭제하기</button>
+          </div>
         ))}
       </div>
     </>
