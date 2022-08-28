@@ -19,7 +19,7 @@ function sum2(a: number, b: number): number {
 
 
 
-// 함수의 옵셔널 파라미터
+// 함수의 옵셔널 파라미터 - ?를 사용하면 그 자리에 넣어도 되고 안넣어도 된다
 function log(a: string, b?: string) {
 
 }
