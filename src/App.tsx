@@ -1,4 +1,5 @@
 import React from 'react';
+import Todo from './1_todo/Todo';
 import './App.css';
 import Counter from './components/Counter/Counter';
 import Greetings from './components/Greetings/Greetings'
@@ -10,6 +11,7 @@ function App() {
   }
   return (
     <div>
+      <Todo />
       <Myform />
       <Counter />
       <Greetings name='kim' mark='!!!' optional='optional' onClick={onClick} />
