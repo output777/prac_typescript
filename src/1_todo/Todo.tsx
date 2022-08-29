@@ -1,9 +1,15 @@
 import React, { useRef } from 'react'
 import { useState } from 'react'
 
+interface TodoType {
+  id: number,
+  title: string,
+  done: boolean
+}
+
 const Todo = () => {
-  const [todos, setTodos] = useState<{ id: number, title: string, done: boolean }[]>([]);
-  const [inputTodo, setInputTodo] = useState<{ id: number, title: string, done: boolean }>({
+  const [todos, setTodos] = useState<TodoType[]>([]);
+  const [inputTodo, setInputTodo] = useState<TodoType>({
     id: 1,
     title: '',
     done: false,
